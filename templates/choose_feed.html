@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suraksha-dhi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-900 text-white scroll-smooth overflow-x-hidden">
+    <!-- Header Section -->
+    <header class="bg-gray-900 text-white fixed top-0 w-full z-10">
+      <div class="container mx-auto flex justify-between items-center py-4">
+        <h1 class="text-xl font-bold">Suraksha-dhi</h1>
+        <nav class="flex-1">
+          <ul class="flex justify-center space-x-6"></ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Choose Feed Section -->
+    <section
+      id="choose-feed"
+      class="min-h-screen bg-gray-800 flex flex-col items-center justify-center p-6 text-center"
+    >
+      <h2 class="text-3xl font-bold mb-8">Choose Your Feed</h2>
+      <div class="flex flex-col gap-6">
+        <form action="{{ url_for('video_feed') }}" method="get">
+          <button
+            type="submit"
+            class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+          >
+            Laptop Feed
+          </button>
+        </form>
+        <form action="{{ url_for('feed') }}" method="get">
+          <button
+            type="submit"
+            class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+          >
+            CCTV Feed (RTSP URL)
+          </button>
+        </form>
+        <form action="{{ url_for('upload_video') }}" method="get">
+          <button
+            type="submit"
+            class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+          >
+            Upload Video
+          </button>
+        </form>
+      </div>
+      <div class="mt-10">
+        <a
+          href="{{ url_for('logout') }}"
+          class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+          >Logout</a
+        >
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="min-h-screen bg-gray-900 flex flex-col items-center justify-center p-6 text-center"
+    >
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="max-w-3xl mb-8">
+        We are dedicated to enhancing public safety through innovative
+        technology. Our real-time threat detection system leverages advanced
+        machine learning and computer vision to monitor public spaces, ensuring
+        swift response to potential threats.
+      </p>
+      <h2 class="text-3xl font-bold mb-4">Our Mission</h2>
+      <p class="max-w-3xl">
+        At Suraksha-Dhi, we believe safety is a right, not a privilege. Our
+        innovative real-time threat detection system empowers communities with
+        the tools they need to stay secure.
+      </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-center text-gray-400 py-6">
+      <p>&copy; 2024 Suraksha-dhi. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

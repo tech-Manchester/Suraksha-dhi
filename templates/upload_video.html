@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Video</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #1f2937;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <div class="container mx-auto px-6 py-12">
+      <div class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-6">
+          Upload Video for Analysis
+        </h1>
+        <form
+          action="{{ url_for('upload_video') }}"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group mb-6">
+            <label for="video_file" class="block text-lg font-medium mb-2"
+              >Select a video file:</label
+            >
+            <input
+              type="file"
+              class="form-control w-full p-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              id="video_file"
+              name="video_file"
+              accept="video/*"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold rounded-full transform hover:scale-105 transition duration-300 ease-in-out"
+          >
+            Upload Video
+          </button>
+        </form>
+
+        {% if message %}
+        <div
+          class="alert alert-success mt-3 text-center bg-green-500 text-white p-3 rounded-md"
+        >
+          {{ message }}
+        </div>
+        {% endif %} {% if error %}
+        <div
+          class="alert alert-danger mt-3 text-center bg-red-500 text-white p-3 rounded-md"
+        >
+          {{ error }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

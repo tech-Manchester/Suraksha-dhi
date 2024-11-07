@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Real-Time Threat Detection System</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f4f6f9;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        margin-top: 80px;
+        max-width: 450px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+      }
+      .header p {
+        font-size: 16px;
+        color: #777;
+      }
+      .form-group label {
+        font-size: 14px;
+        color: #555;
+      }
+      .form-control {
+        border-radius: 5px;
+        box-shadow: none;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+      .btn-primary {
+        background-color: #0069d9;
+        border-color: #0062cc;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 5px;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+      }
+      .text-center a {
+        color: #0069d9;
+        font-size: 14px;
+      }
+      .text-center a:hover {
+        text-decoration: underline;
+      }
+      .mt-4 {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Create a New Account</h1>
+        <p>Suraksha-dhi</p>
+      </div>
+      <form method="POST" action="/signup">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-control"
+            placeholder="Enter username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+      </form>
+    </div>
+  </body>
+</html>

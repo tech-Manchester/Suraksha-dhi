@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Analysis Results</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Video Analysis Results</h1>
+      <table class="table table-bordered mt-4">
+        <tr>
+          <th>Total Frames Analyzed</th>
+          <td>{{ total_frames }}</td>
+        </tr>
+        <tr>
+          <th>Violent Frames Detected</th>
+          <td>{{ violent_frames }}</td>
+        </tr>
+        <tr>
+          <th>Percentage of Violence Detected</th>
+          <td>{{ violence_percentage }}%</td>
+        </tr>
+      </table>
+      <a href="/" class="btn btn-primary mt-3">Go Back to Home</a>
+    </div>
+  </body>
+</html>
